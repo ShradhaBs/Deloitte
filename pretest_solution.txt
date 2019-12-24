@@ -1,0 +1,28 @@
+import java.util.*;
+//import java.util.Scanner;
+class ReverseString
+{
+  public static void main(String args[])
+  {int k;
+  
+int count=0;
+    String word;
+String reverse = "";
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter a string to reverse");
+    word = in.nextLine();
+    int length = word.length();
+    for (int j = length - 1 ; j >= 0 ; j--)
+      reverse = reverse + word.charAt(j);
+    System.out.println("Reverse of the string: " + reverse);
+for(k=0;k<=reverse.length()-1;k++)
+{
+	char ch=reverse.charAt(k);
+if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+count++;
+System.out.println(count);
+}
+}
+
+ }
+}
