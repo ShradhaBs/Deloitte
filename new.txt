@@ -1,0 +1,42 @@
+ppackage exercise;
+
+public class Quest {
+public static void main(String[] args) {
+	String str="The quick brown fox jumps over the lazy dog";
+	System.out.println(str.charAt(12));
+	if(str.contains("is")) {
+		System.out.println("Contains word");
+	}
+	else {
+		System.out.println("Word absent");
+	}
+	String str1=" and killed it.";
+		System.out.println(str.concat(str1));
+		String str2 ="THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+		if(str.equals(str2)) {
+			System.out.println("equal");
+		}
+		else {
+			System.out.println("No");
+		}
+		System.out.println(str.length());
+		String str3="The quick brown Fox jumps over the lazy Dog";
+		if(str==str3) {
+			System.out.println("yes");
+		}
+		else {
+			System.out.println("no");
+		}
+		String str4=str.toLowerCase();
+		System.out.println(str4);
+		String replaceString=str4.replace("the","A");
+		System.out.println(replaceString);
+		String str5=str.toUpperCase();
+		System.out.println(str5);
+		int index=str.indexOf("a");
+		System.out.println(index);
+		char a='e';
+		int position=str.lastIndexOf(a);
+		System.out.println(position);
+}
+}
