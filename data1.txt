@@ -1,0 +1,17 @@
+select * from stu;
+select * from fees;
+---------------------------------------------------
+select roll from fees where amount=10800
+select name from stu where roll=2;
+
+select name from stu where roll=(select roll from fees where amount=10800)     //subquery gives a single statement instead of previous two statements
+------------------------------------------
+update fees set amount=10800 where roll=1
+select name from stu where roll in (select roll from fees where amount=10800)    //to get both therolls with fees 10800
+---------------------------------------------------------------------------
+select name from stu where exists(select roll from fees where amount=10800)       //if condn in bracket exists,then all values will be shown
+---------------------------------------------------------------------------
+select roll,name from stu where roll>any(select roll from fees)                    //gives roll and name of those whose fees is greater than any of the others fees;it acts as a minimum
+select roll,name from stu where roll>all(select roll from fees)                     //gives roll and name of those whose fees is greater than all of the others fees;it acts as a maximum
+--------------------------------------------------------------------------------
+select amount from fees where roll=(select roll from stu where name='Sai')
