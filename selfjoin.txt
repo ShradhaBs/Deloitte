@@ -1,0 +1,13 @@
+SELECT * FROM EMPLOYEES
+select e1.last_name||' works for '||e2.last_name                  //e1 and e2 are references given to the same table
+"Employees and their managers"
+from employees e1,employees e2 where e1.manager_id=e2.employee_id         //to return all those who satisfy criteria
+------------------------------------------------------------------------------
+select e1.last_name||' works for '||e2.last_name
+"Employees and their managers"
+from employees e1,employees e2 where e1.manager_id=e2.employee_id              //used to obtain specific person/data
+and e1.first_name='Neena'                                                   //to return those who satisfy 'and' criteria also
+-------------------------------------------------------------------------------
+select manager_id,sum(salary) from employees
+group by manager_id
+------------------------------------------------------
