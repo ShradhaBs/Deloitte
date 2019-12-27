@@ -1,0 +1,17 @@
+create table emp(
+empno integer primary key,
+empname varchar2(20) not null,
+salary integer,
+desig varchar2(20),
+deptno integer
+)
+create table dept(
+deptno integer primary key,
+deptname varchar2(20),
+location varchar2(20)
+)
+select * from emp;
+alter table emp add constraint con1 foreign key(deptno) references dept(deptno);//reference foreign key from its table
+insert into dept values(100,'HR','Mumbai');
+insert into emp values(12,'Yati',98000,'Developer',100);
+select * from emp
