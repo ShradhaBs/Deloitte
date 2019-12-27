@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Product Details</h2>
+<table border="10" cellspacing="10" cellpadding="10" bgcolor="green" align="center">
+<th>ProductId</th><th>ProductName</th><th>QOH</th><th>Price</th>
+<tr><td>110029</td><td rowspan="2">Laptop</td><td colspan="2" align="center">25</td><td>150000</td></tr>
+<tr><td>110079</td><td>pen</td><td>28</td><td>100</td></tr>
+</table>
+</body>
+</html>
