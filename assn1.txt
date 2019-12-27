@@ -1,0 +1,24 @@
+create table emp(
+eid integer,
+ename varchar2(20),
+eaddr varchar2(20),
+dob date,
+doj date,
+sal integer
+)
+insert into emp values(1,'Shradha','ker','03/07/1997','02/01/2020',2)
+insert into emp values(2,'kavi','uganda','10/10/1997','02/01/2020',4)
+insert into emp values(3,'vand','kar','09/02/1997','02/01/2020',6)
+insert into emp values(4,'gay','guj','04/05/1997','02/01/2020',8)
+insert into emp values(5,'srey','bihar','09/08/1997','02/01/2020',10)
+select * from emp
+select ename from emp where sal>20000
+select ename from emp where (eaddr like '%a') or (eaddr like '%r') or (eaddr like '%p')
+update emp set sal=sal+0.2*sal
+delete from emp where sal<5
+
+alter table emp add email varchar2(20)
+update emp set email='a@gmail.com' where eid=2
+update emp set email='b@gmail.com' where eid=3
+update emp set email='c@gmail.com' where eid=4
+update emp set email='d@gmail.com' where eid=5
