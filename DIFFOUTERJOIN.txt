@@ -1,0 +1,51 @@
+create table Suppliers
+(
+   supplier_id varchar(20),
+   supplier_nae varchar(20)
+)
+/
+
+create table Orders
+(
+  order_id varchar(20),
+   supplier_id varchar(20),
+   order_date date
+)
+
+insert into Suppliers values('10000','IBM')
+insert into Suppliers values('10001','Hewlett Packard')
+insert into Suppliers values('10002','Microsoft')
+insert into Suppliers values('10003','TCS')
+
+insert into Orders values('1','10000',to_date('3/3/09','mm/dd/yy'))
+insert into Orders values('2','10000',to_date('7/5/10','mm/dd/yy'))
+insert into Orders values('3','10001',to_date('12/8/10','mm/dd/yy'))
+insert into Orders values('4','20001',to_date('12/8/10','mm/dd/yy'))
+SELECT * FROM SUPPLIERS
+SELECT * FROM ORDERS
+----------------------------------------------------------------------------------
+SELECT SUPPLIER_NAME,ORDER_DATE
+FROM SUPPLIERS,ORDERS
+WHERE SUPPLIERS.SUPPLIER_ID=ORDERS.SUPPLIER_ID
+----------------------------------------------------------------------------------
+SELECT SUPPLIERS.SUPPLIER_ID,SUPPLIER_NAME,ORDER_DATE //TO SPECIFY COMMON VALUE USE TABLE NAME ALSO
+FROM SUPPLIERS,ORDERS
+WHERE SUPPLIERS.SUPPLIER_ID=ORDERS.SUPPLIER_ID
+----------------------------------------------------------------------------------
+
+SELECT S.SUPPLIER_ID,S.SUPPLIER_NAE,O.ORDER_DATE  //TO DISPLAY TABLE VALUES USING TABLE NAME ALIASES
+FROM SUPPLIERS S,ORDERS O
+WHERE S.SUPPLIER_ID=O.SUPPLIER_ID
+-------------------------------------------------------------------------
+SELECT S.SUPPLIER_ID,S.SUPPLIER_NAE,O.ORDER_DATE //RIGHT OUTER JOIN
+FROM SUPPLIERS S,ORDERS O
+WHERE S.SUPPLIER_ID(+)=O.SUPPLIER_ID
+--------------------------------------------------------------------------
+SELECT S.SUPPLIER_ID,S.SUPPLIER_NAE,O.ORDER_DATE //LEFT OUTER JOIN
+FROM SUPPLIERS S,ORDERS O
+WHERE S.SUPPLIER_ID=O.SUPPLIER_ID(+)
+--------------------------------------------------------------------------
+SELECT S.SUPPLIER_ID,S.SUPPLIER_NAE,O.ORDER_DATE    //FULL OUTER JOIN
+FROM SUPPLIERS S FULL OUTER JOIN ORDERS O
+ON S.SUPPLIER_ID=O.SUPPLIER_ID
+SELECT * FROM EMPLOYEES
