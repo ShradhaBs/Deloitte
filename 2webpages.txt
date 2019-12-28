@@ -1,0 +1,27 @@
+nav.html 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="128876">
+<br/>
+<br/>
+<a href="5-5.html" target="_blank">Patient Details</a>           //"_blank"-to open in new browser page and "main" to open in same page
+
+</body>
+</html>
+-----------------------------------------
+home.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>www.myapp.com</title>
+</head>
+<frameset rows="20%,30%" border="0">
+<frame src="nav.html" name="top"/>
+<frame src="5-1.html" name="main"/>
+</frameset>
+</html>
