@@ -1,0 +1,46 @@
+//code where each part of image becomes a hyperlink to another page
+<html>
+<body>
+<p align ="center">
+<img src="C:\deloitte\core java\day5\abc\WebContent\pdt.jpg" alt="not found"  height=300 usemap="#scenemap"/>
+<map name="scenemap">
+<area shape="rect" coords="6,116,97,184"href="road.html" alt="road"/>
+<area shape="circle" coords="2,10,10"href="home.html" alt="home"/>
+<area shape="poly" coords="10,120,191"href="ground.html" alt="ground"/>
+</map>
+</p>
+</body>
+</html>
+--------------------------------------------------------------------------------------
+//lists
+<html>
+<body>
+<p align ="center">
+<img src="C:\deloitte\core java\day5\abc\WebContent\pdt.jpg" alt="not found"  height=300 usemap="#scenemap"/>
+<map name="scenemap">
+<area shape="rect" coords="6,116,97,184"href="road.html" alt="road"/>
+<area shape="circle" coords="2,10,10"href="home.html" alt="home"/>
+<area shape="poly" coords="13,120,97,191"href="ground.html" alt="ground"/>
+<ul>                                //unordered list
+<li>neha</li>
+<li>rahul</li>
+<li>shradha</li>
+</ul>
+<ul type="square">                  //bullet type will be square
+<li>neha</li>
+<li>rahul</li>
+<li>shradha</li>
+</ul>
+<ol type="I" start="6">              //ordered list of type roman and starts with roman letter 6
+<li>neha</li>
+<li>rahul</li>
+<li>shradha</li>
+</ol>
+<dl>                                //for giving defenitions
+<dt>Laptop</dt>
+<dd>Laptop is an electronic device</dd>
+</dl>
+</map>
+</p>
+</body>
+</html>
