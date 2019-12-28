@@ -1,0 +1,20 @@
+create table emp(
+eid integer constraint cons1 primary key,
+ename varchar2(20) constraint cons2 not null,
+eaddr varchar2(20) check(eaddr not in ('Newyork','London','Paris')),
+sal integer constraint cons4 check(sal between 20000 and 30000),
+caddr varchar2(20) default 'ASV Suntech Park'
+)
+
+create table sal(
+eid integer primary key,
+epf integer check(epf>0),
+ehra integer check(ehra>0
+)
+
+-----------------------------------------------------------------
+create table citizen(
+cid integer constraint const1,
+cdob date,
+cdod date,
+constraint err check(cdob<cdod))
