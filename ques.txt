@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+var name=prompt("enter name:","first second");
+
+	var res=confirm("do u want to continue");
+	if(res==true){
+		alert("welcome:"+name.substring(0,1)+" "+name.split(' ')[1]);
+		
+	}
+	else{
+		alert("thanks:"+name);
+	}
+
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
