@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">          //to check javascript,type the url in chrome and press F12.THEN TAKE CONSOLE AND CHECK ERRORS
+var name="shradha";
+alert("welcome"+name);
+for(i=1;i<=3;i++){
+document.write("<h1>Hello shradha</h1>");
+
+
+}
+name=43;
+function display(){
+//prompt("enter first num:","12"); //to get prompt with default value 12
+var num1=prompt("enter first num:","12"); 
+var num2=prompt("enter second num:","20");
+var result=parseInt(num1)+parseInt(num2);
+alert("The sum of two numbers are:"+result);
+}
+function demo(){                                                     //fn declared
+	var res=confirm("do u want to continue?");
+	if(res==true){
+		alert("ok clicked");
+	}
+	else{
+		alert("cancel clicked");
+	}
+}
+function mohan(){
+	alert(num)
+}
+function displaygreetings(msg){
+	if(msg==null){
+		msg="goodnight";
+		alert(msg)
+	}
+	
+}
+alert("welcome:"+name);
+</script>
+</head>
+<body>
+<h1>hello javascript</h1>
+<input type="button" value="go" onclick="display()">                 //fn called             
+<br/>                                
+<input type="button" value="Demo" onclick="demo()">
+<input type="button" value="Greetings1" onclick="displaygreetings()">
+<input type="button" value="Greetings1" onclick="displaygreetings('hello')">
+</body>
+</html>
