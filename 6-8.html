@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function validate(){
+	var customerId=document.getElementById("customerId").value
+	var customerIdErrMsg=document.getElementById("customerIdErrMsg");
+	
+	
+	var customerName=document.getElementById("customerName").value
+	var customerNameErrMsg=document.getElementById("customerNameErrMsg");
+	
+	var customerAdd=document.getElementById("customerAdd").value
+	var customerIdErrMsg=document.getElementById("customerAddErrMsg");
+	
+	var billAmt=document.getElementById("billAmt").value
+	var billAmtErrMsg=document.getElementById("customerAmtErrMsg");
+	
+	
+if(customerId.length==0){
+	customerIdErrMsg.innerHTML="<font color=red>Please enter u r customer Id</font>"
+}
+else if(customerId.length<5){
+	customerIdErrMsg.innerHTML="<font color=red>Enter atleast 5 digits</font>"
+}
+else if(customerName.length==0){
+	customerIdErrMsg.innerHTML=" ";
+	customerNameErrMsg.innerHTML="font color=red>Enter customer name</font>"
+	
+}
+else if(customerAdd.length==0){
+	customerNameErrMsg.innerHTML=" ";
+	customerAddErrMsg.innerHTML="font color=red>Enter customer address</font>"
+}
+else if(billAmt.length==0){
+	customerAddErrMsg.innerHTML=" ";
+	billAmtErrMsg.innerHTML="font color=red>Enter customer address</font>"
+}
+
+	}
+
+
+
+
+</script>
+
+</head>
+<body>
+<form>
+<table cellspacing="10" cellpadding="10" align=center>
+<tr>
+
+<td>Customer Id:<input type="text" name="CustomerId" id="customerId"></td>
+< <tr>
+
+<td>Customer Name:<input type="text" name="customerName" id="customerName"></td>
+<td><span id="customerNameErrMsg"></span></tr>
+<tr>
+
+<td>Customer address<input type="text" name="customeradd" id="customeradd"></td></tr>
+<tr>
+
+<td>Bill amount<input type="text" name="billamt" id="billamt"></td></tr>
+<tr>
+
+<td align="center"><input type="button" value="click" onclick="validate()">
+<div id="errorMessageCustomerId"></div></td>
+
+
+</tr>
+</table>
+</form>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function validate(){
+	var guestName=document.getElementById("guestName").value
+	var errorMessageGuestName=document.getElementById("errorMessageGuestName");
+	if(guestName.length==0){
+		errorMessageGuestName.innerHTML="<font color=red>Please enter u r username</font>"
+	}
+	else{
+		errorMessageGuestName.innerHTML="<font color=green>Welcome:</font>"+guestName;
+	}
+}
+
+</script>
+</head>
+<body>
+*Guestname:
+<input type="text" name="guestName" id="guestName">
+<div id="errorMessageGuestName"></div>
+<br/>
+<input type="button" value="Go" onclick="validate()">
+</body>
+</html>

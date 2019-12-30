@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+		var today = new Date();
+		var lastdate = new Date();
+		lastdate.setFullYear(2020, 0, 15);
+		var amt=prompt("enter bill amount",'5000');
+		//var res=confirm("do u want to continue");
+		//if(res==true){
+		if (lastdate > today) {
+			var day = 1000 * 60 * 60 * 24;
+			
+			x = (lastdate - today) / day;
+			x=Math.round(x);
+			amt=parseInt(amt)+parseInt(x*50);
+			alert("your bill is:"+amt);
+
+			//alert("no of days left:" + x)
+		} else {
+			alert("your bill amt is:+amt");
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+</html>
