@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML JavaScript output on same page</title>
+    <script type="text/JavaScript">
+        function showMessage(){
+            var name = document.getElementById("name").value;
+            display_name.innerHTML= name;
+            var spousename = document.getElementById("spousename").value;
+            display_spousename.innerHTML= spousename;
+            var gender = document.getElementByName("gender").value;
+            display_gender.innerHTML= gender;
+            var comments = document.getElementByName("comments").value;
+            display_comments.innerHTML= comments;
+        }			
+			
+            
+        
+    </script>
+</head>
+<body>
+
+<table border="5" >
+
+<tr><td>
+Enter name: </td><td><input type="text" id = "name"></td></tr>
+</br>
+<tr><td>
+Enter spousename:</td> <td><input type="text" id = "spousename"></td>
+</tr>
+<tr>
+<td>Gender</td>                                                        
+<td><input type="radio" name="gender" id="male" value="male">Male
+<input type="radio" name="gender" id="female" value="female">Female
+<input type="radio" name="gender" id="others" value="Others">Others
+</td>
+</tr>
+<tr>
+<td>Comments</td>                                                        
+<td><input type="radio" name="comments" id="like" value="like">like
+<input type="radio" name="comments" id="dislike" value="dislike">dislike
+
+</td>
+</tr>
+
+</br><tr>
+<th colspan="2"><input type="submit" onclick="showMessage()"  value="submit" /></th></tr>
+<tr><td><p> name is: </td><td><span id = "display_name"></span> </p></td></tr>
+<tr><td><p> spousename is:</td><td> <span id = "display_spousename"></span> </p></td></tr>
+<tr><td><p> gender is: </td><td><span id = "display_gender"></span> </p></td></tr>
+<tr><td><p> comments is: </td><td><span id = "display_comments"></span> </p></td></tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function validate(){
+	var userName=document.getElementById("username").value	;
+	display_userName.innerHTML= userName;
+	<!--var spouseName=document.getElementById("spousename").value;	
+	var Gender=document.getElementById("gender").value;	-->
+	
+	
+}
+
+</script>
+</head>
+<body >
+
+<table border="10" spacing="10" cellpadding="10" align=center>
+<h2>Login form</h2>
+<tr>
+
+<td>User Name:</td><td><input type="text" name="userName" id="userName"></td></tr><br/>
+<tr>
+
+<td>Spouse Name:</td><td><input type="text" name="spousename" id="spousename"></td></tr><br/>
+</tr>
+<tr>
+<td>Gender</td>                                                        
+<td><input type="radio" name="gender" id="male" value="male">Male
+<input type="radio" name="gender" id="female" value="female">Female
+<input type="radio" name="gender" id="others" value="Others">Others
+</td>
+</tr>
+<tr>
+<td>Comments</td>                                                        
+<td><input type="radio" name="comments" id="like" value="like">like
+<input type="radio" name="comments" id="dislike" value="dislike">dislike
+
+</td>
+</tr>
+
+<tr>
+<th colspan="2"><input type="submit" value="submit" onclick="validate()"/></th>
+<br/>
+<th colspan="2"><p> Message is: <span id = "display_userName"></span> </p></th>
+</tr>
+
+
+</table>
+<body>
+
+
+</body>
+
+</body>
+</html>
