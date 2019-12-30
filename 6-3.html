@@ -1,0 +1,17 @@
+<html>
+<body>
+	<script type="text/javascript">
+		var today = new Date();
+		var lastdate = new Date();
+		lastdate.setFullYear(2020, 0, 1);
+		if (lastdate > today) {
+			var day = 1000 * 60 * 60 * 24;
+			x = (lastdate - today) / day;
+
+			alert("no of days left:" + x)
+		} else {
+			alert("time up");
+		}
+	</script>
+</body>
+</html>
