@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+p{
+background-color:blue;
+text-align:center;
+color:white;
+text-transform:lowercase;
+font-family:sans-serif;
+font-size:20px;
+text-decoration:underline;
+}
+h4{
+background-color:lime;
+
+}
+body{background-image:url(taj.jpg);
+ background-repeat:repeat-y;}
+A:link{
+color:pink;
+}
+A:visited{
+color:red;
+}
+A:hover{
+color:green;
+}
+
+
