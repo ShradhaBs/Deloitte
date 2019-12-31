@@ -1,0 +1,33 @@
+<html>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+</script>
+<head>
+   <script>
+        $(document).ready(function () {
+            //Disable cut copy paste
+            $('body').bind('cut copy paste', function (e) 
+	{
+                alert("Very smart, you can cut copy paste")
+                e.preventDefault();
+            });
+            //Disable mouse right click
+            $("body").on("contextmenu", function (e) {
+                alert("Very smart, You can't right click")
+                return false;
+            });
+             //Disable mouse right click
+            $(document).ready(function() {
+    $("#hi").on("contextmenu",function(e){
+e.preventDefault();
+       return false;
+    }); 
+}); 
+        
+    </script>
+</head>
+
+<body>
+    <p id="hi>Click me</p>
+</body>
+
+</html>
