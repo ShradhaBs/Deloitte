@@ -1,6 +1,6 @@
-package javaproj2;
+package pro8;
 
-public class Customer {
+public class Customer implements Comparable<Customer>{
 public Customer(int customerId, String customerName, String customerAddress, int billAmount) {
 		super();
 		CustomerId = customerId;
@@ -40,6 +40,13 @@ public void setBillAmount(int billAmount) {
 public String toString() {
 	return "Customer [CustomerId=" + CustomerId + ", CustomerName=" + CustomerName + ", CustomerAddress="
 			+ CustomerAddress + ", billAmount=" + billAmount + "]";
+}
+@Override
+public int compareTo(Customer o) {
+	if(this.getBillAmount()>o.getBillAmount())
+	return 0;
+	else
+		return -1;
 }
 
 }
