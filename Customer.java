@@ -1,6 +1,9 @@
 package pro8;
 
-public class Customer implements Comparable<Customer>{
+import java.io.Serializable;
+import java.util.Scanner;
+
+public class Customer implements Serializable,Comparable<Customer>{
 public Customer(int customerId, String customerName, String customerAddress, int billAmount) {
 		super();
 		CustomerId = customerId;
@@ -11,7 +14,17 @@ public Customer(int customerId, String customerName, String customerAddress, int
 private int CustomerId;
 private String CustomerName;
 private String CustomerAddress;
-private int billAmount;
+private transient int billAmount;
+public Customer() {
+	
+}
+public void accept() {
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Enter customer id : "); CustomerId = scanner.nextInt();
+	System.out.println("Enter customer name : "); CustomerName = scanner.next();
+	System.out.println("Enter customer address : "); CustomerAddress = scanner.next();
+	System.out.println("Enter bill amount : "); billAmount = scanner.nextInt();
+}
 public int getCustomerId() {
 	return CustomerId;
 }
